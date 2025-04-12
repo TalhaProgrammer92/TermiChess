@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
       {
-        "name": "Run ChessGame",
+        "name": "Run TermiChess",
         "type": "cppdbg",
         "request": "launch",
-        "program": "${workspaceFolder}/ChessGame",
+        "program": "${workspaceFolder}/TermiChess",
         "args": [],
         "stopAtEntry": false,
         "cwd": "${workspaceFolder}",

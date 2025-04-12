@@ -7,12 +7,17 @@
         "command": "g++",
         "args": [
           "-g",
-          "main.cpp",
-        //   "Board.cpp",
-        //   "Player.cpp",
-        //   "CSVHandler.cpp",
+          
+          "src/main.cpp",
+          "src/ui/*.cpp",
+          // "src/utils/*.cpp",
+          // "src/board/*.cpp",
+          // "src/data/*.cpp",
+          // "src/game/*.cpp",
+          // "src/pieces/*.cpp",
+          
           "-o",
-          "ChessGame"
+          "TermiGame"
         ],
         "group": {
           "kind": "build",
