@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     wcout << UI::generateAnsiCode(
-        "Hello, Rayan!",
+        "Hello, Areeb!",
         UI::FGColor::DARK_GREEN,
         UI::BGColor::LIGHT_CYAN,
         UI::Style::ITALIC) << endl;
