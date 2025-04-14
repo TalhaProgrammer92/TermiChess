@@ -5,7 +5,11 @@ using namespace std;
 
 int main()
 {
-    wcout << generateAnsiCode(stringToWstring("Welcome to TermiChess"), FG::LIGHT_RED, BG::LIGHT_CYAN, STYLE::BOLD) << endl;
+    wcout << UI::generateAnsiCode(
+        "Hello, World!",
+        UI::FGColor::DARK_GREEN,
+        UI::BGColor::LIGHT_CYAN,
+        UI::Style::ITALIC) << endl;
 
     return 0;
 }
