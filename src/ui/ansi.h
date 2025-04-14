@@ -15,6 +15,7 @@ namespace UI
         DARK_MAGENTA,
         DARK_CYAN,
         DARK_WHITE,
+
         LIGHT_BLACK,
         LIGHT_RED,
         LIGHT_GREEN,
@@ -36,6 +37,7 @@ namespace UI
         DARK_MAGENTA,
         DARK_CYAN,
         DARK_WHITE,
+
         LIGHT_BLACK,
         LIGHT_RED,
         LIGHT_GREEN,
