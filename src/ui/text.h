@@ -15,13 +15,18 @@ namespace UI
 	public:
 		UI::ColorProperty color;
 
-		//* Constructor
-		Text(const std::string text, UI::ColorProperty color);
+		//* Constructors
+		Text() = default;
+		Text(const std::string& text, UI::ColorProperty color);
 
 		//* Getters
-		std::string getText();
+		std::string getText() const;
 
-		//* Display method
-		void display(bool line_break);
+		//* Overload operator << to display
+		friend std::ostream& operator<<(std::ostream& os, const Text& text)
+		{
+			os << UI::getANSICode(text.getText(), text.color.getFg(), text.color.getBg(), text.color.getStyle());
+			return os;
+		}
 	};
 }

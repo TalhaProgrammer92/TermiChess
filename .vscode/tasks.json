@@ -10,7 +10,7 @@
                 "src/main.cpp",
                 "src/ui/*.cpp",
                 "-o",
-                "TermiGame"
+                "TermiChess"
             ],
             "group": "build",
             "problemMatcher": [

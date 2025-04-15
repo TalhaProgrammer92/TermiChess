@@ -1,19 +1,19 @@
 #include "color.h"
 #include "ansi.h"
+#include <iostream>
 
-UI::ColorProperty::ColorProperty(UI::FGColor fg, UI::BGColor bg = UI::BGColor::NONE, UI::Style style = UI::Style::NONE) : fg(fg), bg(bg), style(style) {}
+//* Constructor
+UI::ColorProperty::ColorProperty(std::string fg, std::string bg, std::string style) : fg(fg), bg(bg), style(style) {}
 
-UI::FGColor UI::ColorProperty::getFGColor()
-{
+//* Getters
+std::string UI::ColorProperty::getFg() const {
 	return fg;
 }
 
-UI::BGColor UI::ColorProperty::getBGColor()
-{
+std::string UI::ColorProperty::getBg() const {
 	return bg;
 }
 
-UI::Style UI::ColorProperty::getStyle()
-{
+std::string UI::ColorProperty::getStyle() const {
 	return style;
 }
