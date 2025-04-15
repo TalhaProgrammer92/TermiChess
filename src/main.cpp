@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
     UI::Text text("I've fixed all bugs", UI::ColorProperty(
-      UI::FG::BRIGHT_RED, UI::BG::DULL_BLUE, UI::STYLE::BOLD
+      UI::FG::BRIGHT_RED, UI::BG::NONE, UI::STYLE::BOLD
     ));
 
     cout << text << endl;
