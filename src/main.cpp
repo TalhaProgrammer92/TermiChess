@@ -15,5 +15,3 @@ int main()
 
     return 0;
 }
-
-//! Build the project with: g++ -g src/main.cpp src/ui/*.cpp -o TermiChess

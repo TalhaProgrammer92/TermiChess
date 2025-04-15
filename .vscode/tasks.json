@@ -8,7 +8,12 @@
             "args": [
                 "-g",
                 "src/main.cpp",
-                "src/ui/*.cpp",
+                // "src/ui/*.cpp",
+
+                "src/ui/ansi.cpp",
+                "src/ui/color.cpp",
+                "src/ui/text.cpp",
+
                 "-o",
                 "TermiChess"
             ],
