@@ -1,6 +1,6 @@
 #pragma once
 
-#include <string>
+#include <iostream>
 
 namespace UI
 {
@@ -23,7 +23,9 @@ namespace UI
         LIGHT_BLUE,
         LIGHT_MAGENTA,
         LIGHT_CYAN,
-        LIGHT_WHITE
+        LIGHT_WHITE,
+
+        NONE
     };
 
     // ANSI color codes for background
@@ -45,7 +47,9 @@ namespace UI
         LIGHT_BLUE,
         LIGHT_MAGENTA,
         LIGHT_CYAN,
-        LIGHT_WHITE
+        LIGHT_WHITE,
+
+        NONE
     };
 
     // ANSI style codes
@@ -58,20 +62,19 @@ namespace UI
         DIM,
         ITALIC,
         BLINK,
-        HIDDEN
+        HIDDEN,
+
+        NONE
     };
 
     // Function declarations for generating ANSI codes
-    std::string getAnsiCode(FGColor fg);
-    std::string getAnsiCode(BGColor bg);
-    std::string getAnsiCode(Style style);
+    std::string getFGAnsiCode(FGColor fg);
+    std::string getBGAnsiCode(BGColor bg);
+    std::string getStyleAnsiCode(Style style);
 
     // ANSI reset code
     extern const std::string RESET;
 
     // Function to generate ANSI code for colored output
-    std::wstring generateAnsiCode(const std::string &text,
-                                  FGColor fg = FGColor::DARK_WHITE,
-                                  BGColor bg = BGColor::DARK_BLACK,
-                                  Style style = Style::BOLD);
+    std::string generateAnsiCode(const std::string &text, FGColor fg, BGColor bg, Style style);
 }

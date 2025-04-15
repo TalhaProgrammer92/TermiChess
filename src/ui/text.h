@@ -1,30 +1,27 @@
 #pragma once
 
 #include "ansi.h"
-#include <string>
+#include "color.h"
+#include <iostream>
 
-namespace UI    
+namespace UI
 {
 	//* Text class
 	class Text
-    {
-		private:
-			std::string text;
-			UI::FGColor fgColor;
-			UI::BGColor bgColor;
-			UI::Style style;
-		
-		public:
-			//* Constructor
-            Text(const std::string text, UI::FGColor fgColor, UI::BGColor bgColor, UI::Style style);
+	{
+	private:
+		std::string text;
 
-			//* Getters
-			std::string getText();
-			UI::FGColor getFGColor();
-			UI::BGColor getBGColor();
-			UI::Style getStyle();
+	public:
+		UI::ColorProperty color;
 
-			//* Overlaod << operator for display
-			friend std::wostream& operator<<(std::wostream& out, const Text& text);
-    };
+		//* Constructor
+		Text(const std::string text, UI::ColorProperty color);
+
+		//* Getters
+		std::string getText();
+
+		//* Display method
+		void display(bool line_break);
+	};
 }

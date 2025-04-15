@@ -1,16 +1,14 @@
-#include <string>
+#include <iostream>
 #include "ansi.h"
 #include "text.h"
 
 // using namespace std;
 // using namespace UI;
 
-UI::Text::Text(const std::string text, UI::FGColor fgColor, UI::BGColor bgColor, UI::Style style)
+UI::Text::Text(const std::string text, UI::ColorProperty color)
 {
 	this->text = text;
-	this->fgColor = fgColor;
-	this->bgColor = bgColor;
-	this->style = style;
+	this->color = color;
 }
 
 std::string UI::Text::getText()
@@ -18,21 +16,8 @@ std::string UI::Text::getText()
 	return text;
 }
 
-UI::FGColor UI::Text::getFGColor()
+void UI::Text::display(bool line_break)
 {
-	return fgColor;
-}
-UI::BGColor UI::Text::getBGColor()
-{
-	return bgColor;
-}
-UI::Style UI::Text::getStyle()
-{
-	return style;
-}
-
-std::wostream &operator<<(std::wostream &out, UI::Text &text)
-{
-	out << UI::generateAnsiCode(text.getText(), text.getFGColor(), text.getBGColor(), text.getStyle());
-	return out;
+	std::cout << UI::generateAnsiCode(text, color.getFGColor(), color.getBGColor(), color.getStyle());
+	if (line_break) std::cout << std::endl;
 }
