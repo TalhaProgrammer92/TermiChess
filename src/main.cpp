@@ -7,11 +7,22 @@ using namespace std;
 
 int main()
 {
-    UI::Text text("I've fixed all bugs", UI::ColorProperty(
-      UI::FG::BRIGHT_GREEN, UI::BG::NONE, UI::STYLE::BOLD
-    ));
+  // UI::Text text("I've fixed all bugs", UI::ColorProperty(
+  //   UI::FG::BRIGHT_GREEN, UI::BG::NONE, UI::STYLE::BOLD
+  // ));
 
-    cout << text << endl;
+  // cout << text << endl;
 
-    return 0;
+  UI::Message message;
+
+  message.addText(UI::Text(
+      "Text1 ",
+      UI::ColorProperty(
+          UI::FG::BRIGHT_RED,
+          UI::BG::NONE,
+          UI::STYLE::NONE)));
+  
+  
+
+  return 0;
 }

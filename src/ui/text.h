@@ -2,7 +2,9 @@
 
 #include "ansi.h"
 #include "color.h"
+#include "func.h"
 #include <iostream>
+#include <vector>
 
 namespace UI
 {
@@ -35,13 +37,13 @@ namespace UI
 	class Message
 	{
 		private:
-			Text text;
+			vector<Text> text;
 		
 		public:
-			//* Constructor
-			Message(Text text);
+			//* Add text
+			void addText(Text text);
 
 			//* Display method
-			
+			void display();
 	};
 }
