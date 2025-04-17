@@ -36,12 +36,8 @@ namespace UI
 	//* Message Class
 	class Message
 	{
-		private:
-			vector<Text> text;
-		
 		public:
-			//* Add text
-			void addText(Text text);
+			vector<Text> text;
 
 			//* Display method
 			void display();

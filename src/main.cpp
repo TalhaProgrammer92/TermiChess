@@ -21,8 +21,15 @@ int main()
           UI::FG::BRIGHT_RED,
           UI::BG::NONE,
           UI::STYLE::NONE)));
+
+  message.addText(UI::Text(
+      "Text2 ",
+      UI::ColorProperty(
+          UI::FG::BRIGHT_BLUE,
+          UI::BG::NONE,
+          UI::STYLE::NONE)));
   
-  
+  message.display();
 
   return 0;
 }

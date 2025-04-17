@@ -16,12 +16,6 @@ std::string UI::Text::getText() const
 	return text;
 }
 
-
-void UI::Message::addText(Text text)
-{
-	this->text.push_back(text);
-}
-
 void UI::Message::display()
 {
 	for(int i=0; i<text.size(); i++)
